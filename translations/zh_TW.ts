@@ -57,7 +57,7 @@
     <message>
         <location filename="../src/qml/BluetoothPage.qml" line="49"/>
         <source>Bluetooth is disabled</source>
-        <translation>藍牙不可用</translation>
+        <translation>藍芽不可用</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     <message>
         <location filename="../src/qml/About/Main.qml" line="91"/>
         <source>Processor</source>
-        <translation>处理器</translation>
+        <translation>處理器</translation>
     </message>
     <message>
         <location filename="../src/qml/About/Main.qml" line="96"/>
@@ -432,7 +432,7 @@
     <message>
         <location filename="../src/qml/WLAN/Main.qml" line="32"/>
         <source>WLAN</source>
-        <translation>無線區域網路</translation>
+        <translation>Wi-Fi</translation>
     </message>
     <message>
         <location filename="../src/qml/Bluetooth/Main.qml" line="32"/>
@@ -464,17 +464,17 @@
     <message>
         <location filename="../src/qml/Application/Main.qml" line="60"/>
         <source>File manager</source>
-        <translation>檔案管理器</translation>
+        <translation>檔案管理</translation>
     </message>
     <message>
         <location filename="../src/qml/Application/Main.qml" line="68"/>
         <source>Email</source>
-        <translation>郵件</translation>
+        <translation>電子郵件</translation>
     </message>
     <message>
         <location filename="../src/qml/Application/Main.qml" line="76"/>
         <source>Terminal emulator</source>
-        <translation type="unfinished"></translation>
+        <translation>終端</translation>
     </message>
     <message>
         <location filename="../src/qml/Hotspot/Main.qml" line="32"/>
@@ -490,7 +490,7 @@
     <message>
         <location filename="../src/qml/Hotspot/Main.qml" line="102"/>
         <source>SSID</source>
-        <translation>名稱</translation>
+        <translation>SSID</translation>
     </message>
     <message>
         <location filename="../src/qml/Hotspot/Main.qml" line="113"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../src/fonts/kxftconfig.cpp" line="503"/>
         <source>Vendor default</source>
-        <translation type="unfinished"></translation>
+        <translation>默認</translation>
     </message>
     <message>
         <location filename="../src/fonts/kxftconfig.cpp" line="505"/>
@@ -546,7 +546,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="52"/>
         <source>WLAN</source>
-        <translation>無線區域網路</translation>
+        <translation>Wi-Fi</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="57"/>
@@ -557,7 +557,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="61"/>
         <source>Ethernet</source>
-        <translation type="unfinished"></translation>
+        <translation>乙太網路</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="91"/>
@@ -566,7 +566,7 @@
         <location filename="../src/qml/SideBar.qml" line="118"/>
         <location filename="../src/qml/SideBar.qml" line="127"/>
         <source>Display and appearance</source>
-        <translation>外觀與顯示</translation>
+        <translation>顯示與外觀</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="95"/>
@@ -576,7 +576,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="104"/>
         <source>Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>字體</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="113"/>
@@ -586,7 +586,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="122"/>
         <source>Dock</source>
-        <translation type="unfinished">Dock</translation>
+        <translation">Dock</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="136"/>
@@ -594,7 +594,7 @@
         <location filename="../src/qml/SideBar.qml" line="163"/>
         <location filename="../src/qml/SideBar.qml" line="179"/>
         <source>System</source>
-        <translation>操作系統</translation>
+        <translation>系統</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="149"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../src/qml/User/UserDelegateItem.qml" line="124"/>
         <source>Currently logged</source>
-        <translation>當前登入</translation>
+        <translation>當前登入的</translation>
     </message>
     <message>
         <location filename="../src/qml/User/UserDelegateItem.qml" line="165"/>
@@ -650,7 +650,7 @@
     <message>
         <location filename="../src/qml/WLAN/WifiItem.qml" line="210"/>
         <source>Connect</source>
-        <translation>連結</translation>
+        <translation>連接</translation>
     </message>
 </context>
 <context>
@@ -658,7 +658,7 @@
     <message>
         <location filename="../src/qml/WLAN/WifiView.qml" line="35"/>
         <source>WLAN</source>
-        <translation>無線區域網路</translation>
+        <translation>Wi-Fi</translation>
     </message>
 </context>
 <context>
@@ -696,7 +696,7 @@
     <message>
         <location filename="../src/qml/WLAN/WirelessDetailsDialog.qml" line="147"/>
         <source>Gateway</source>
-        <translation>閘道器</translation>
+        <translation>閘道</translation>
     </message>
     <message>
         <location filename="../src/qml/WLAN/WirelessDetailsDialog.qml" line="160"/>
