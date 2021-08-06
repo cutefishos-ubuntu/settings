@@ -586,7 +586,7 @@
     <message>
         <location filename="../src/qml/SideBar.qml" line="122"/>
         <source>Dock</source>
-        <translation">Dock</translation>
+        <translation>Dock</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="136"/>
