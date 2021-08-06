@@ -78,7 +78,7 @@
     <message>
         <location filename="../src/qml/About/Main.qml" line="68"/>
         <source>Built on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>基於%1</translation>
     </message>
     <message>
         <location filename="../src/qml/About/Main.qml" line="76"/>
@@ -307,7 +307,7 @@
     <message>
         <location filename="../src/qml/Display/Main.qml" line="187"/>
         <source>Refresh rate</source>
-        <translation>更新率</translation>
+        <translation>刷新率</translation>
     </message>
     <message>
         <location filename="../src/qml/Display/Main.qml" line="207"/>
