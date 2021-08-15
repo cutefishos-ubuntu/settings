@@ -17,6 +17,12 @@
 #include "password.h"
 #include "powermanager.h"
 
+#include "cursor/cursorthememodel.h"
+#include "cursor/mouse.h"
+
+#include "datetime/time.h"
+#include "datetime/timezonemap.h"
+
 static QObject *passwordSingleton(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
     Q_UNUSED(engine);
@@ -59,11 +65,15 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<Brightness>(uri, 1, 0, "Brightness");
     qmlRegisterType<Battery>(uri, 1, 0, "Battery");
     qmlRegisterType<BatteryHistoryModel>(uri, 1, 0, "BatteryHistoryModel");
+    qmlRegisterType<CursorThemeModel>(uri, 1, 0, "CursorThemeModel");
     qmlRegisterType<About>(uri, 1, 0, "About");
     qmlRegisterType<Background>(uri, 1, 0, "Background");
     qmlRegisterType<Language>(uri, 1, 0, "Language");
     qmlRegisterType<Fonts>(uri, 1, 0, "Fonts");
     qmlRegisterType<PowerManager>(uri, 1, 0, "PowerManager");
+    qmlRegisterType<Mouse>(uri, 1, 0, "Mouse");
+    qmlRegisterType<Time>(uri, 1, 0, "Time");
+    qmlRegisterType<TimeZoneMap>(uri, 1, 0, "TimeZoneMap");
     qmlRegisterSingletonType<Password>(uri, 1, 0, "Password", passwordSingleton);
     qmlRegisterType<QAbstractItemModel>();
 

@@ -13,7 +13,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT
 
 set(QT Core Gui Widgets Quick QuickControls2 X11Extras DBus Xml Concurrent LinguistTools)
 find_package(Qt5 REQUIRED ${QT})
-# find_package(FishUI REQUIRED)
+find_package(X11 REQUIRED)
 find_package(Freetype REQUIRED)
 find_package(PkgConfig REQUIRED)
 find_package(Libcrypt REQUIRED)
@@ -42,6 +42,13 @@ set(SRCS
     src/fonts/kxftconfig.cpp
     src/fonts/fonts.cpp
     src/powermanager.cpp
+    src/cursor/cursorthememodel.cpp
+    src/cursor/cursortheme.cpp
+    src/cursor/mouse.cpp
+    src/datetime/time.cpp
+    src/datetime/timezonedata.h
+    src/datetime/timezonemap.cpp
+    src/datetime/timedated_interface.cpp
 )
 
 set(RESOURCES
@@ -52,6 +59,8 @@ qt5_add_dbus_adaptor(DBUS_SOURCES
                      src/org.cutefish.SettingsUI.xml
                      src/application.h Application)
 set_source_files_properties(${DBUS_SOURCES} PROPERTIES SKIP_AUTOGEN ON)
+
+# qt5_add_dbus_interface(DBUS_SOURCES src/datetime/org.freedesktop.timedate1.xml timedated_interface)
 
 add_executable(${PROJECT_NAME} ${DBUS_SOURCES} ${SRCS} ${RESOURCES})
 target_link_libraries(${PROJECT_NAME}
@@ -72,6 +81,11 @@ target_link_libraries(${PROJECT_NAME}
         ${FREETYPE_LIBRARIES}
         ${ICU_LDFLAGS}
         Libcrypt::Libcrypt
+
+        ${X11_LIBRARIES}
+        X11::X11
+        X11::Xi
+        X11::Xcursor
 )
 
 file(GLOB TS_FILES translations/*.ts)
@@ -79,7 +93,7 @@ qt5_create_translation(QM_FILES ${TS_FILES})
 add_custom_target(translations DEPENDS ${QM_FILES} SOURCES ${TS_FILES})
 add_dependencies(${PROJECT_NAME} translations)
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION /usr/bin)
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 install(FILES
     cutefish-settings.desktop

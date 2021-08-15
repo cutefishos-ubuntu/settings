@@ -64,7 +64,7 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.smallSpacing
+            spacing: FishUI.Units.largeSpacing * 2
 
             // Battery Info
             BatteryItem {
@@ -118,19 +118,14 @@ ItemPage {
                 }
             }
 
-            Item {
-                height: FishUI.Units.largeSpacing
-            }
-
-            Label {
-                text: qsTr("History")
-                color: FishUI.Theme.disabledTextColor
-                leftPadding: FishUI.Units.largeSpacing
-            }
-
             RoundedItem {
                 visible: history.count > 2
                 spacing: 0
+
+                Label {
+                    text: qsTr("History")
+                    color: FishUI.Theme.disabledTextColor
+                }
 
                 HistoryGraph {
                     Layout.fillWidth: true
@@ -173,18 +168,13 @@ ItemPage {
                 }
             }
 
-            Item {
-                height: FishUI.Units.largeSpacing
-            }
-
-            Label {
-                text: qsTr("Health")
-                color: FishUI.Theme.disabledTextColor
-                leftPadding: FishUI.Units.largeSpacing
-            }
-
             RoundedItem {
                 visible: battery.capacity
+
+                Label {
+                    text: qsTr("Health")
+                    color: FishUI.Theme.disabledTextColor
+                }
 
                 RowLayout {
                     spacing: FishUI.Units.largeSpacing * 4
@@ -199,6 +189,7 @@ ItemPage {
                             anchors.fill: parent
                             color: "#FF8738"
                             radius: FishUI.Theme.mediumRadius
+                            opacity: 0.1
                             visible: battery.capacity >= 0 && battery.capacity <= 79
                         }
 
@@ -206,7 +197,7 @@ ItemPage {
                             id: _poorLabel
                             anchors.centerIn: parent
                             text: qsTr("Poor")
-                            color: _poorRect.visible ? "#FFFFFF" : "#FF8738"
+                            color: "#FF8738"
                         }
                     }
 
@@ -223,6 +214,7 @@ ItemPage {
                             anchors.fill: parent
                             color: "#3385FF"
                             radius: FishUI.Theme.mediumRadius
+                            opacity: 0.1
                             visible: battery.capacity >= 80 && battery.capacity <= 89
                         }
 
@@ -230,7 +222,7 @@ ItemPage {
                             id: _normalLabel
                             anchors.centerIn: parent
                             text: qsTr("Normal")
-                            color: _normalRect.visible ? "#FFFFFF" : "#3385FF"
+                            color: "#3385FF"
                         }
                     }
 
@@ -247,6 +239,7 @@ ItemPage {
                             anchors.fill: parent
                             color: "#00CD23"
                             radius: FishUI.Theme.mediumRadius
+                            opacity: 0.1
                             visible: battery.capacity >= 90 && battery.capacity <= 100
                         }
 
@@ -254,7 +247,7 @@ ItemPage {
                             id: _excellentLabel
                             anchors.centerIn: parent
                             text: qsTr("Excellent")
-                            color: _excellentRect.visible ? "#FFFFFF" : "#00CD23"
+                            color: "#00CD23"
                         }
                     }
                 }
@@ -271,10 +264,6 @@ ItemPage {
                     key: qsTr("Maximum Capacity")
                     value: battery.capacity + "%"
                 }
-            }
-
-            Item {
-                height: FishUI.Units.largeSpacing
             }
 
             RoundedItem {

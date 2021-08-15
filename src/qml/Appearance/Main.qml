@@ -41,15 +41,14 @@ ItemPage {
             id: layout
             anchors.fill: parent
             // anchors.bottomMargin: FishUI.Units.largeSpacing
-            spacing: FishUI.Units.smallSpacing
-
-            Label {
-                text: qsTr("Theme")
-                color: FishUI.Theme.disabledTextColor
-                leftPadding: FishUI.Units.largeSpacing
-            }
+            spacing: FishUI.Units.largeSpacing * 2
 
             RoundedItem {
+                Label {
+                    text: qsTr("Theme")
+                    color: FishUI.Theme.disabledTextColor
+                }
+
                 // Light Mode and Dark Mode
                 RowLayout {
                     spacing: FishUI.Units.largeSpacing * 2
@@ -69,9 +68,7 @@ ItemPage {
                     }
                 }
 
-                Item {
-                    height: FishUI.Units.largeSpacing
-                }
+                HorizontalDivider {}
 
                 RowLayout {
                     spacing: FishUI.Units.largeSpacing
@@ -94,19 +91,33 @@ ItemPage {
                         rightPadding: 0
                     }
                 }
-            }
 
-            Item {
-                height: FishUI.Units.largeSpacing
-            }
+                RowLayout {
+                    Label {
+                        text: qsTr("System effects")
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
+                    }
 
-            Label {
-                text: qsTr("Accent color")
-                color: FishUI.Theme.disabledTextColor
-                leftPadding: FishUI.Units.largeSpacing
+                    Item {
+                        Layout.fillWidth: true
+                    }
+
+                    Switch {
+                        checked: appearance.systemEffects
+                        Layout.fillHeight: true
+                        Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
+                        onCheckedChanged: appearance.systemEffects = checked
+                        rightPadding: 0
+                    }
+                }
             }
 
             RoundedItem {
+                Label {
+                    text: qsTr("Accent color")
+                    color: FishUI.Theme.disabledTextColor
+                }
+
                 GridView {
                     id: accentColorView
                     height: itemSize

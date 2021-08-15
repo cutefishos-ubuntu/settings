@@ -47,7 +47,6 @@ ItemPage {
                 Label {
                     text: qsTr("Mode")
                     color: FishUI.Theme.disabledTextColor
-                    bottomPadding: FishUI.Units.smallSpacing
                 }
 
                 RowLayout {

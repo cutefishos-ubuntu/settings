@@ -26,6 +26,7 @@ Rectangle {
 
     default property alias content : _mainLayout.data
     property alias spacing: _mainLayout.spacing
+    property alias layout: _mainLayout
 
     color: FishUI.Theme.secondBackgroundColor
     radius: FishUI.Theme.mediumRadius
@@ -37,9 +38,10 @@ Rectangle {
     ColumnLayout {
         id: _mainLayout
         anchors.fill: parent
-        anchors.leftMargin: FishUI.Units.largeSpacing
-        anchors.rightMargin: FishUI.Units.largeSpacing
+        anchors.leftMargin: FishUI.Units.largeSpacing * 1.5
+        anchors.rightMargin: FishUI.Units.largeSpacing * 1.5
         anchors.topMargin: FishUI.Units.largeSpacing
         anchors.bottomMargin: FishUI.Units.largeSpacing
+        spacing: FishUI.Units.largeSpacing
     }
 }

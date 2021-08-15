@@ -137,6 +137,15 @@ Item {
             category: qsTr("System")
         }
 
+        ListElement {
+            title: qsTr("Mouse")
+            name: "mouse"
+            page: "qrc:/qml/Cursor/Main.qml"
+            iconSource: "cursor.svg"
+            iconColor: "#3385FF"
+            category: qsTr("System")
+        }
+
 //        ListElement {
 //            title: qsTr("Application")
 //            name: "application"
@@ -145,6 +154,15 @@ Item {
 //            iconColor: "#DA7C43"
 //            category: qsTr("System")
 //        }
+
+        ListElement {
+            title: qsTr("Date & Time")
+            name: "datetime"
+            page: "qrc:/qml/DateTime/Main.qml"
+            iconSource: "datetime.svg"
+            iconColor: "#418CFF"
+            category: qsTr("System")
+        }
 
         ListElement {
             title: qsTr("Language")
@@ -192,6 +210,7 @@ Item {
             text: rootWindow.title
             Layout.preferredHeight: rootWindow.header.height
             leftPadding: FishUI.Units.largeSpacing + FishUI.Units.smallSpacing
+            rightPadding: FishUI.Units.largeSpacing + FishUI.Units.smallSpacing
             topPadding: FishUI.Units.largeSpacing
             bottomPadding: 0
             font.pointSize: 15
@@ -229,9 +248,10 @@ Item {
                 height: FishUI.Units.fontMetrics.height + FishUI.Units.largeSpacing + FishUI.Units.smallSpacing
 
                 Text {
-                    anchors.fill: parent
-                    anchors.leftMargin: FishUI.Units.smallSpacing
-                    anchors.rightMargin: FishUI.Units.largeSpacing
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.leftMargin: Qt.application.layoutDirection === Qt.RightToLeft ? 0 : FishUI.Units.smallSpacing
+                    anchors.rightMargin: FishUI.Units.smallSpacing
                     anchors.topMargin: FishUI.Units.largeSpacing
                     anchors.bottomMargin: FishUI.Units.smallSpacing
                     color: FishUI.Theme.disabledTextColor
@@ -298,10 +318,10 @@ Item {
                             width: 16
                             height: width
                             source: "qrc:/images/sidebar/dark/" + model.iconSource
-                            sourceSize: Qt.size(22, 22)
+                            sourceSize: Qt.size(width, height)
                             Layout.alignment: Qt.AlignVCenter
-                            antialiasing: true
-                            smooth: true
+                            antialiasing: false
+                            smooth: false
                         }
                     }
 

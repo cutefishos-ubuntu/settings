@@ -78,7 +78,7 @@
     <message>
         <location filename="../src/qml/About/Main.qml" line="68"/>
         <source>Built on %1</source>
-        <translation type="unfinished"></translation>
+        <translation>بر اساس %1</translation>
     </message>
     <message>
         <location filename="../src/qml/About/Main.qml" line="76"/>
@@ -143,27 +143,27 @@
     <message>
         <location filename="../src/qml/Fonts/Main.qml" line="31"/>
         <source>Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>فونت ها</translation>
     </message>
     <message>
         <location filename="../src/qml/Fonts/Main.qml" line="92"/>
         <source>General Font</source>
-        <translation>قلم عمومی</translation>
+        <translation>فونت عمومی</translation>
     </message>
     <message>
         <location filename="../src/qml/Fonts/Main.qml" line="109"/>
         <source>Fixed Font</source>
-        <translation>قلم ثابت</translation>
+        <translation>فونت ثابت</translation>
     </message>
     <message>
         <location filename="../src/qml/Fonts/Main.qml" line="126"/>
         <source>Font Size</source>
-        <translation>اندازه قلم</translation>
+        <translation>اندازه فونت</translation>
     </message>
     <message>
         <location filename="../src/qml/Fonts/Main.qml" line="187"/>
         <source>Hinting</source>
-        <translation type="unfinished"></translation>
+        <translation>اشاره کردن</translation>
     </message>
     <message>
         <location filename="../src/qml/Fonts/Main.qml" line="200"/>
